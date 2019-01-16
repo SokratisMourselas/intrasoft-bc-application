@@ -16,7 +16,8 @@ const Game = (props) =>{
 
   return (
   <div>
-    <h1>{props.game}</h1>
+    <h6><strong>When:</strong> {props.game.date}, <strong>Where:</strong> {props.game.address}</h6>
+    <h1>Intrasoft International vs <label>{props.game.vs}</label></h1>
 
     <h3>Players available:</h3>
     {team}

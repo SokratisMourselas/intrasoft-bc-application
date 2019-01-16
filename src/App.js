@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Game from './components/Game/Game';
+import intrasoft_thumb from './intrasoft-thumb.jpg';
 
 class App extends Component {
 
@@ -12,7 +13,7 @@ class App extends Component {
              {id: 3, name: 'Mazdan', age: 23}
            ],
     games:
-         {id: 1, place:'OAKA Stadium', address:'Kifisias Ave.', playersAvailable:[], playersSelected:[] } 
+         {id: 1,vs: "TrenOSE", place:'OAKA Stadium', date: '20-01-2019', address:'Kifisias Ave.', playersAvailable:[], playersSelected:[] } 
     
  }
 
@@ -28,7 +29,7 @@ class App extends Component {
         <div>
           <Game
               players = {this.state.players}
-              game={this.state.games.place}
+              game={this.state.games}
           />
         </div>
       )
@@ -37,6 +38,7 @@ class App extends Component {
     return (
       <div className="App">
 
+        <img style={{height:100, width:100}} name='intrasoft' src={intrasoft_thumb}></img>
         {games}
 
       </div>
